@@ -1,0 +1,39 @@
+.ratings {
+    direction: rtl;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%
+}
+
+.star {
+    color: #ccc;
+    display: inline-block;
+    line-height: 60px;
+    position: relative;
+    transition: color .2s ease
+}
+
+.star:before {
+    content: "\2605";
+    font-size: 60px;
+    height: 60px;
+    width: 60px
+}
+
+@media screen and (max-width:768px) {
+    .star:before {
+        content: "\2605";
+        font-size: 30px;
+        height: 30px;
+        width: 30px
+    }
+}
+
+.star.selected,
+.star:hover,
+.star:hover~.star {
+    color: #393a7b;
+    transition: color .8s ease
+}
